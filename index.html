@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Image Gallery</h1>
+
+    <div class="filter-buttons">
+        <button onclick="filterImages('all')">All</button>
+        <button onclick="filterImages('nature')">Nature</button>
+        <button onclick="filterImages('city')">City</button>
+    </div>
+
+    <div class="gallery">
+        <div class="image-box nature">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/049/855/471/small/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-free-photo.jpg" onclick="openLightbox(0)">
+        </div>
+        <div class="image-box city">
+            <img src="https://4kwallpapers.com/images/wallpapers/shanghai-city-cityscape-night-city-city-lights-aerial-view-2880x1800-8851.jpg" onclick="openLightbox(1)">
+        </div>
+        <div class="image-box nature">
+            <img src="https://wallpapercat.com/w/full/0/f/3/5815630-3840x2160-desktop-hd-4k-wallpaper-image.jpg" onclick="openLightbox(2)">
+        </div>
+        <div class="image-box city">
+            <img src="https://images.alphacoders.com/591/thumb-1920-591832.jpg" onclick="openLightbox(3)">
+        </div>
+        <div class="image-box nature">
+            <img src="https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg" onclick="openLightbox(4)">
+        </div>
+        <div class="image-box city">
+            <img src="https://wallpapers.com/images/hd/surreal-vista-of-a-bustling-urban-skyline-in-4k-resolution-eae11l38l12zh2qw.jpg" onclick="openLightbox(5)">
+        </div>
+    </div>
+
+    <div id="lightbox">
+        <span class="close" onclick="closeLightbox()">×</span>
+        <button class="prev" onclick="changeImage(-1)">❮</button>
+        <img id="lightbox-img">
+        <button class="next" onclick="changeImage(1)">❯</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
